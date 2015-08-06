@@ -1,0 +1,163 @@
+== Slim::Template.new('BF/var.slim').render
+doctype transitional
+html[xmlns="http://www.w3.org/1999/xhtml"]
+  head
+    title == ($title)
+    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
+    css:
+      body {width: 100%; margin: 0; line-height: 121%; background-color: #FFFFFF;}
+      td img {display: block;}
+      img {font-family: Arial, sans-serif; font-size: 16px;}
+      .teaserText, .selBtn, .logo {font-family: Arial, sans-serif; font-weight: bold; font-size: 30px; text-align: center; line-height: 100%;}
+      .txtcenter {text-align: center;}
+      .lh-100 {line-height: 100%;}
+      .lh-130 {line-height: 130%;}
+      .m0auto {margin: 0 auto;}
+      .m0 {margin: 0;}
+  body[bgcolor="#ffffff"]
+    table.m0auto[align="center" border="0" cellpadding="0" cellspacing="0" width="640"]
+      /! header
+      == Slim::Template.new('BF/_header.slim').render
+      tr
+        td
+          img[src="images/top_shad.png" width="640" height="10" border="0" alt=""]
+      /! content
+      tr
+        td
+          table[border="0" cellpadding="0" cellspacing="0" width="640"]
+            tr
+              td valign="top"
+                img[src="images/left_shad.png" width="10" height="1160" border="0" alt=""]
+              td
+                table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                  tr
+                    td
+                      table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                        tr
+                          td
+                            a href==($L1_1) target="_blank"
+                              img.logo[src="images/s1_1.png" width="210" height="66" border="0" alt==$alt1_1]
+                          td
+                            a href==($L1_2) target="_blank"
+                              img[src="images/s1_2.png" width="410" height="66" border="0" alt==""]
+                  tr
+                    td
+                      table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                        tr
+                          td
+                            a href==($L2) target="_blank"
+                              img[src="images/s2.png" width="620" height="58" border="0" alt==($alt2)]
+                          / td
+                          /   a href==($L2_2) target="_blank"
+                          /     img.teaserText[src="images/s2_2.png" width="390" height="56" border="0" alt==$alt2_2]
+                  tr
+                    td
+                      table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                        tr
+                          td
+                            / a href==($L3_1) target="_blank"
+                            img[src="images/s3_1.png" width="25" height="239" border="0" alt=""]
+                          td
+                            a href==($L3_2) target="_blank"
+                              img[src="images/s3_2.jpg" width="270" height="239" border="0" alt==$alt3_2]
+                          td
+                            / a href==($L3_3) target="_blank"
+                            img[src="images/s3_3.png" width="30" height="239" border="0" alt=""]
+                          td
+                            a href==($L3_4) target="_blank"
+                              img[src="images/s3_4.jpg" width="270" height="239" border="0" alt==$alt3_4]
+                          td
+                            / a href==($L3_5) target="_blank"
+                            img[src="images/s3_5.png" width="25" height="239" border="0" alt=""]
+                  tr
+                    td
+                      table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                        tr
+                          td
+                            table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                              tr
+                                td
+                                  table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                                    tr
+                                      td
+                                        / a href==($L4_t1_c1_r1) target="_blank"
+                                        img[src="images/s4_t1_c1_r1.png" width="25" height="31" border="0" alt=""]
+                                      td
+                                        a href==($L4_t1_c2_r1) target="_blank"
+                                          img[src="images/s4_t1_c2_r1.jpg" width="218" height="31" border="0" alt==$alt4_t1_c2_r3]
+                              tr
+                                td
+                                  / a href==($L4_t1_c1_r2) target="_blank"
+                                  img[src="images/s4_t1_c1_r2.png" width="243" height="25" border="0" alt=""]
+                              tr
+                                td
+                                  table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                                    tr
+                                      td
+                                        / a href==($L4_t1_c1_r3) target="_blank"
+                                        img[src="images/s4_t1_c1_r3.png" width="20" height="78" border="0" alt=""]
+                                      td
+                                        a href==($L4_t1_c2_r3) target="_blank"
+                                          img[src="images/s4_t1_c2_r3.jpg" width="223" height="78" border="0" alt=""]
+                          td
+                            a href==($L4_t2_c1) target="_blank"
+                              img[src="images/s4_t2_c1.png" width="134" height="134" border="0" alt==$alt4_t2_c1]
+                          td
+                            table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                              tr
+                                td
+                                  table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                                    tr
+                                      td
+                                        a href==($L4_t3_c1_r1) target="_blank"
+                                          img[src="images/s4_t3_c1_r1.jpg" width="218" height="31" border="0" alt=""]
+                                      td
+                                        / a href==($L4_t3_c2_r1) target="_blank"
+                                        img[src="images/s4_t3_c2_r1.png" width="25" height="31" border="0" alt=""]
+                              tr
+                                td
+                                  / a href==($L4_t3_c1_r2) target="_blank"
+                                  img[src="images/s4_t3_c1_r2.png" width="243" height="25" border="0" alt=""]
+                              tr
+                                td
+                                  table[border="0" cellpadding="0" cellspacing="0" width="243"]
+                                    tr
+                                      td
+                                        a href==($L4_t3_c1_r3) target="_blank"
+                                          img[src="images/s4_t3_c1_r3.jpg" width="223" height="78" border="0" alt==$alt4_t3_c1_r3]
+                                      td
+                                        / a href==($L4_t3_c2_r3) target="_blank"
+                                        img[src="images/s4_t3_c2_r3.png" width="20" height="78" border="0" alt=""]
+                  tr
+                    td
+                      table[border="0" cellpadding="0" cellspacing="0" width="620"]
+                        tr
+                          td
+                            / a href==($L5_1) target="_blank"
+                            img[src="images/s5_1.png" width="20" height="202" border="0" alt=""]
+                          td
+                            a href==($L5_2) target="_blank"
+                              img[src="images/s5_2.jpg" width="280" height="202" border="0" alt=""]
+                          td
+                            / a href==($L5_3) target="_blank"
+                            img[src="images/s5_3.png" width="20" height="202" border="0" alt=""]
+                          td
+                            a href==($L5_4) target="_blank"
+                              img[src="images/s5_4.jpg" width="280" height="202" border="0" alt=""]
+                          td
+                            / a href==($L5_5) target="_blank"
+                            img[src="images/s5_5.png" width="20" height="202" border="0" alt=""]
+                  tr
+                    td
+                      a href==($L6) target="_blank"
+                        img.txtcenter.selBtn[src="images/s6.jpg" width="620" height="165" border="0" alt==$alt6]
+                  /! end content
+
+                  /! footer
+                  == Slim::Template.new('BF/_footer.slim').render
+                  
+                  /! mentions
+                  == Slim::Template.new('BF/_mentions.slim').render
+
+              td valign="top"
+                img[src="images/right_shad.png" width="10" height="1160" border="0" alt=""]
