@@ -30,7 +30,13 @@ class Slimed
       beautiful = HtmlBeautifier.beautify(premailer, tab_stops: 2)
       file.puts beautiful
     end
-  
+  end
+
+  def toOnline(project)
+    source = File.read(path+project+".html").gsub('src="images/','src="http://www.webdesignord.fr/domoti/img/images/')
+    dest = File.open(path+project+"_online.html", "w")
+    dest << source
+    dest.close    
   end
 end
 
@@ -40,16 +46,17 @@ de = Slimed.new(project+'.slim', project+'.html', 'DE/')
 fr = Slimed.new(project+'.slim', project+'.html', 'FR/')
 nl = Slimed.new(project+'.slim', project+'.html', 'NL/')
 uk = Slimed.new(project+'.slim', project+'.html', 'UK/')
-# puts fr.out
+# news compilées :
 bf.tohtml
 bv.tohtml
 de.tohtml
 fr.tohtml
 nl.tohtml
 uk.tohtml
-
-# online
-# source = File.read(project+".html").gsub('src="images/','src="http://www.webdesignord.fr/domoti/img/images/')
-# dest = File.open(project+"_online.html", "w")
-# dest << source
-# dest.close
+# news alt && || toOnline 'src="http://www.webdesignord.fr/domoti/img/images/'
+bf.toOnline(project)
+bv.toOnline(project)
+de.toOnline(project)
+fr.toOnline(project)
+nl.toOnline(project)
+uk.toOnline(project)
